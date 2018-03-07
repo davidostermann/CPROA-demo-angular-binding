@@ -1,0 +1,25 @@
+{{ test }}
+
+
+<!-- <input type="text" value="{{test}}"/> -->
+
+
+<div>
+  1. <input type="text" [value]="test" (input)="handleChange(testInput.value)" #testInput/>
+</div>
+
+<div>
+  2. <input type="text" [(ngModel)]="test" />
+</div>
+
+<div [style.color]="settings.col">TEST</div>
+<div [ngStyle]="{color: settings.col}">COULEUR</div>
+
+<ul>
+  <li><a href="" (click)="changeColor('red'); $event.preventDefault()">rouge</a></li>
+  <li><a href="" (click)="changeColor('blue'); $event.preventDefault()">bleu</a></li>
+  <li><a href="" (click)="changeColor('green'); $event.preventDefault()">vert</a></li>
+</ul>
+
+<app-content></app-content>
+
